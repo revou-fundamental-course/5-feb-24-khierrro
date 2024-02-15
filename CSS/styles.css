@@ -1,24 +1,100 @@
+head {background-color: #9fca11;}
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-.container {
-    display: flex;
+    font-family: "roboto-regular", sans-serif, serif;
+  }
+  
+  
+  main {
+    margin: auto;
+    max-width: 800px;
     justify-content: center;
-}
-
-.column {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
+  }
+  
+  main > form > label,
+  input,
+  textarea,
+  .operations {
+    display: block;
+    margin-bottom: 10px;
+    font-family: inherit;
+  }
+  
+  main form .operations button {
+    margin: 5px;
+    font-size: 12px;
+    padding: 10px 24px;
+    border-radius: 2x;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .convert {
+    color: rgb(6, 5, 5);
+    background-color: #f1cea7;
+    border: 2px solid #04aa6d;
+  }
+  
+  .reset {
+    color: rgb(12, 8, 8);
+    background-color: #f1cea7;
+    border: 2px solid #04aa6d;
+  }
+  
+  .reverse {
+    color: rgb(27, 18, 18);
+    background-color: #f1cea7;
+    border: 2px solid #04aa6d;
+  }
+  
+  .convert:hover {
+    border: 2px solid #04aa6d;
+    color: black;
+    background-color: white;
+  }
+  
+  .reset:hover {
+    border: 2px solid #f1cea7;
+    color: black;
+    background-color: white;
+  }
+  
+  .reverse:hover {
+    border: 2px solid #008cba;
+    color: black;
+    background-color: white;
+  }
+  
+  .guidelines {
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
     border-radius: 5px;
-}
-
-.column h3 {
-    margin-top: 0;
-}
-
-.result {
-    margin-top: 10px;
-}
+    margin-top: 20px;
+  }
+  
+  #err_msg {
+    font-size: 12px;
+    color: #f44336;
+    margin: 0px;
+    margin-bottom: 5px;
+    margin-top: 4px;
+    display: none;
+  }
+  
+  .error {
+    margin-bottom: 0px;
+    border: 2px solid red;
+  }
+  
+  .msg_show {
+    display: inline-block !important;
+  }
+  
+  footer {
+    font-size: 12px;
+    color: rgb(43, 61, 77);
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+  }
+  

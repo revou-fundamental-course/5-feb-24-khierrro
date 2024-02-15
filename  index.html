@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Revou Mini Project</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://github.com/revou-fundamental-course/5-feb-24-khierrro/raw/main/font%20google">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://github.com/revou-fundamental-course/5-feb-24-khierrro/raw/main/font%20google" rel="stylesheet">
+    <!-- tambah link -->
 </head>
 <body>
-    <h2>Temperature Converter</h2>
-    <div class="container">
-        <div class="column">
-            <h3>Celsius to Fahrenheit</h3>
-            <form id="celsiusForm">
-                <label for="celsiusInput">Input Temperature:</label>
-                <input type="text" id="celsiusInput" name="celsiusInput">
-                <input type="submit" value="Convert">
-            </form>
-            <div id="celsiusResult" class="result"></div>
-        </div>
-        <div class="column">
-            <h3>Fahrenheit to Celsius</h3>
-            <form id="fahrenheitForm">
-                <label for="fahrenheitInput">Input Temperature:</label>
-                <input type="text" id="fahrenheitInput" name="fahrenheitInput">
-                <input type="submit" value="Convert">
-            </form>
-            <div id="fahrenheitResult" class="result"></div>
-        </div>
-    </div>
+    <header id="header"></header>
+    <main>
+        <div class="container">
+            <p id="title">
+                Masukkan suhu derajat Celcius (<sup>o</sup>C) ke kotak di bawah, lalu klik tombol konversi dalam bentuk Fahrenheit (<sup>o</sup>F).
+            </p>
+            <form>
+                <label for="celcius" id="labelC">Celcius (<sup>o</sup>C)</label>
+                <textarea name="celcius" id="celcius" cols="50" rows="5" onfocus="removeClass()"></textarea>
+                <p id="err_msg">Message</p>
 
-    <script src="script.js"></script>
+                <div class="operations">
+                    <button type="button" class="convert" onclick="calculate()">Konversi</button>
+                    <button type="reset" class="reset" onclick="removeClass()">Reset</button>
+                    <button type="button" class="reverse" onclick="reverse()">Reverse</button>
+                </div>
+
+                <label for="fahrenheit" id="labelF">Fahrenheit (<sup>o</sup>F)</label>
+                <textarea name="fahrenheit" id="fahrenheit" cols="50" rows="5"></textarea>
+
+                <label for="result">Cara Kalkulasi</label>
+                <textarea name="result" id="result" cols="50" rows="5"></textarea>
+            </form>
+            <div class="guidelines">
+                <p id="guide-title">Celcius ke Fahrenheit</p>
+                <h3 id="guide-h3">Cara konversi dari Celcius (<sup>o</sup>C) ke Fahrenheit (<sup>o</sup>F)</h3>
+                <hr />
+
+                <p id="guide-rumus">
+                    Suhu S dalam derajat Fahrenheit (<sup>o</sup>F) sama dengan S dalam derajat Celcius (<sup>o</sup>C) dikalikan 9/5, kemudian hasilnya ditambahkan dengan 32.
+                </p>
+
+                <p id="guide-rumus1">
+                    S<sub>(<sup>o</sup>F)</sub> = (S<sub>(<sup>o</sup>C)</sub> x 9/5) + 32
+                </p>
+                <p>atau</p>
+                <p id="guide-rumus2">
+                    S<sub>(<sup>o</sup>F)</sub> = (S<sub>(<sup>o</sup>C)</sub> x 1.8) + 32
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>&copy; 2024</footer>
 </body>
 </html>
+<!--external help 😅 (chat gpt bad💀💀)-->
